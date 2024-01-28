@@ -7,6 +7,6 @@ For the first time you use the batch file you should follow the followings steps
 3. Create a Desktop shortcut to that batch file (.bat).
 4. Double click on the shortcut to execute the batch file and install QGIS.
 
-** Double click on the shortcut periodically (weekly for example) in order to keep the installed QGIS always up to date.  
+** Double click on the shortcut periodically (weekly for example) in order to keep the installed QGIS always up to date.** 
 
 When you run the batch file, it checks whether updates are available and, in that case, performs the update and replacement of only the necessary QGIS components.
