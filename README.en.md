@@ -16,7 +16,7 @@ Batch files (bat) for easy and automatic QGIS installation and update on Windows
 
 # How-to use
 
-For the first time you use the batch file you should follow the followings steps.
+The first time you use the batch file you should follow the followings steps.
 1. Download the batch file (.bat)
 2. Move the file from Download folder to a local disk folder of your choice.
 3. Create a Desktop shortcut to that batch file (.bat).
