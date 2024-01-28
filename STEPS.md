@@ -1,5 +1,5 @@
 ## COMO USAR
-[![en](https://img.shields.io/badge/lang-en-red.svg)](README.en.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](STEPS.en.md)
 
 Para utilizar pela primeira vez o batch file deve seguir os seguintes passos.
 1. Descarregar o ficheiro batch file (.bat)
