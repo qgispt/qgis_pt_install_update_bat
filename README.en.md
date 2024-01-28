@@ -6,13 +6,13 @@ Batch files (bat) for easy and automatic QGIS installation and update on Windows
 **If run regularly, it guarantees you have the latest version of QGIS installed on Windows!**
 
 ## QGIS-LTR Install and Update
-**qgis_ltr_install_update.bat** - Batch file to install and update the most stable QGIS-LTR version (Long-Term Release).
+**[qgis_ltr_install_update.bat](Batchfiles/qgis_ltr_install_update.bat)** - Batch file to install and update the most stable QGIS-LTR version (Long-Term Release).
 
 ## QGIS Install and Update
-**qgis_install_update.bat** - Batch file to install and update the current QGIS stable version.
+**[qgis_install_update.bat](Batchfiles/qgis_install_update.bat)** - Batch file to install and update the current QGIS stable version.
 
 ## QGIS-LTR and QGIS Install and Update
-**qgis_both_install_update.bat** - Batch file to install and update both QGIS stable versions (QGIS-LTR and QGIS).
+**[qgis_both_install_update.bat](Batchfiles/qgis_both_install_update.bat)** - Batch file to install and update both QGIS stable versions (QGIS-LTR and QGIS).
 
 # How-to use
 
