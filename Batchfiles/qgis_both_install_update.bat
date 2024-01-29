@@ -2,6 +2,8 @@
 :: Purpose:  QGIS and QGIS-LTR automatic install and update using osgeo4w-setup.exe
 :: Author:   ricardodepinho@gmail.com
 :: Revision: 29 January 2024
+:: License: This code is distributed under GNU AGPLv3
+:: https://github.com/qgispt/qgis_pt_install_update_bat/blob/main/LICENSE
 ::
 :: This script will:
 :: 1. change the current directory to the user downloads folder
