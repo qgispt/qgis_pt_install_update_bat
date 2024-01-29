@@ -1,7 +1,7 @@
 :: Name:     qgis_both_install_update.bat
 :: Purpose:  QGIS and QGIS-LTR automatic install and update using osgeo4w-setup.exe
 :: Author:   ricardodepinho@gmail.com
-:: Revision: 28 January 2024
+:: Revision: 29 January 2024
 ::
 :: This script will:
 :: 1. change the current directory to the user downloads folder
@@ -26,13 +26,6 @@ SET osgeo4w_root=C:\OSGeo4W
 SET osgeo4w_menu=QGIS
 
 SET osgeo4w_startmenu=%APPDATA%\Microsoft\Windows\Start Menu\Programs\%osgeo4w_menu%
-
-:: SET desktop path as desk if onedrive is in use
-IF EXIST %onedrive% (
- SET desk="%onedrive%\Desktop"
-) ELSE (
- SET desk="%UserProfile%\Desktop"
-)
 
 :: Set user persistent variable: QGIS_GLOBAL_SETTINGS_FILE
 :: uncomment and replace path to set user persistent QGIS_GLOBAL_SETTINGS_FILE 
@@ -80,8 +73,13 @@ CALL %osgeo4w_file%^
     --site %osgeo4w_site%^
     --upgrade-also
 
-:: Copy QGIS Desktop shortcup links to user Desktop
-CALL ROBOCOPY "%osgeo4w_startmenu%" %desk% "QGIS Desktop*.lnk" /purge > nul
+:: Copy QGIS Desktop shortcup links to user Desktop and to onedrive Desktop if onedrive is in use
+IF EXIST %onedrive% (
+ CALL ROBOCOPY "%osgeo4w_startmenu%" "%onedrive%\Desktop" "QGIS Desktop*.lnk" /purge > nul
+) ELSE IF EXIST %onedrivecommercial% (
+ CALL ROBOCOPY "%osgeo4w_startmenu%" "%onedrivecommercial%\Desktop" "QGIS Desktop*.lnk" /purge > nul
+)
+CALL ROBOCOPY "%osgeo4w_startmenu%" "%UserProfile%\Desktop" "QGIS Desktop*.lnk" /purge > nul
 
 ::PAUSE
 
