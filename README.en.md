@@ -1,7 +1,7 @@
 # Batch files for easy and automatic QGIS installation and update on Windows
 [![pt](https://img.shields.io/badge/lang-pt-green.svg)](README.md)
 
-Batch files (bat) for easy and automatic QGIS installation and update on Windows, using the OSGeo4W oficial recommended installer.
+Batch files (bat) for easy and automatic QGIS installation and update on Windows, using the [OSGeo4W](https://www.osgeo.org/projects/osgeo4w/) oficial recommended installer.
 
 **If run regularly, it guarantees you have the latest version of QGIS installed on Windows!**
 
