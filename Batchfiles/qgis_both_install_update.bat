@@ -1,7 +1,7 @@
 :: Name:     qgis_both_install_update.bat
 :: Purpose:  QGIS and QGIS-LTR automatic install and update using osgeo4w-setup.exe
 :: Author:   ricardodepinho@gmail.com
-:: Revision: 29 January 2024
+:: Revision: 30 January 2024
 :: License: This code is distributed under GNU AGPLv3
 :: https://github.com/qgispt/qgis_pt_install_update_bat/blob/main/LICENSE
 ::
@@ -76,12 +76,15 @@ CALL %osgeo4w_file%^
     --upgrade-also
 
 :: Copy QGIS Desktop shortcup links to user Desktop and to onedrive Desktop if onedrive is in use
-IF EXIST %onedrive% (
- CALL ROBOCOPY "%osgeo4w_startmenu%" "%onedrive%\Desktop" "QGIS Desktop*.lnk" /purge > nul
-) ELSE IF EXIST %onedrivecommercial% (
+IF EXIST "%onedrive%\Desktop" (
+ CALL ROBOCOPY "%osgeo4w_startmenu%" "%onedrive%\Desktop" "QGIS Desktop*.lnk" "%osgeo4w_startmenu%" /purge  > nul
+)
+IF EXIST "%onedrivecommercial%\Desktop" (
  CALL ROBOCOPY "%osgeo4w_startmenu%" "%onedrivecommercial%\Desktop" "QGIS Desktop*.lnk" /purge > nul
 )
-CALL ROBOCOPY "%osgeo4w_startmenu%" "%UserProfile%\Desktop" "QGIS Desktop*.lnk" /purge > nul
+IF EXIST "%UserProfile%\Desktop" (
+ CALL ROBOCOPY "%osgeo4w_startmenu%" "%UserProfile%\Desktop" "QGIS Desktop*.lnk" /purge > nul
+)
 
 ::PAUSE
 
